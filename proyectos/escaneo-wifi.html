@@ -6,6 +6,7 @@
   <title>Escaneo Wi-Fi — Luis Fernando López Espinoza</title>
   <meta name="description" content="App multiplataforma en .NET MAUI para escanear, diagnosticar y monitorear redes locales en tiempo real.">
   <link rel="icon" type="image/png" href="../img/proyectos/Escaneo%20Wifi/Icono.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -22,10 +23,9 @@
   </nav>
 
   <main class="container">
-    <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
+    <a class="back" href="../index.html#proyectos"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i>Volver a proyectos</a>
 
     <header class="project-header">
-      <p class="hero__role">Diagnóstico de redes · App multiplataforma</p>
       <h1>Escaneo Wi-Fi</h1>
       <p>
         App multiplataforma en .NET MAUI para escanear, diagnosticar y monitorear redes
@@ -34,12 +34,12 @@
 
       <!-- Etiquetas clicables: cada una abre su bloque de detalle (imagen + texto) debajo -->
       <ul class="tags tags--interactive">
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-fases">Escaneo en 3 fases</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-ssdp">Descubrimiento SSDP</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-windows">Integración con Windows</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-puertos">Puertos y calidad de red</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-monitoreo">Monitoreo en 2º plano</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-inventario">Inventario</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-fases">Escaneo en 3 fases<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-ssdp">Descubrimiento SSDP<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-windows">Integración con Windows<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-puertos">Puertos y calidad de red<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-monitoreo">Monitoreo en 2º plano<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-inventario">Inventario<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
       </ul>
 
       <div class="tech-details">
@@ -227,9 +227,14 @@
       </div>
     </section>
 
-    <nav class="project-nav">
-      <a href="../index.html#proyectos">← Todos los proyectos</a>
-      <a href="refaccionaria-los-mochis.html">Refaccionaria Los Mochis →</a>
+    <nav class="project-switcher" aria-label="Proyectos">
+      <h2>Proyectos</h2>
+      <ul>
+        <li><a href="refaccionaria-los-mochis.html"><span class="ps-icon" style="--media-bg: #f2f6ea"><img src="../img/proyectos/refaccionaria-los-mochis/Logo.png" alt=""></span><span>Refaccionaria Los Mochis</span></a></li>
+        <li><a href="mouse-wifi.html"><span class="ps-icon" style="--media-bg: #10141e"><img src="../img/proyectos/Mouse%20Wifi/Icono.jpg" alt=""></span><span>Mouse Wi-Fi</span></a></li>
+        <li><a href="conteo-gasolina.html"><span class="ps-icon" style="--media-bg: #1a0a04"><img src="../img/proyectos/Contador%20Gasolina/icono.png" alt=""></span><span>Conteo Gasolina</span></a></li>
+        <li><a href="escaneo-wifi.html" aria-current="page"><span class="ps-icon" style="--media-bg: #000c13"><img src="../img/proyectos/Escaneo%20Wifi/Icono.png" alt=""></span><span>Escaneo Wi-Fi</span></a></li>
+      </ul>
     </nav>
   </main>
 

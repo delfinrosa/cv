@@ -6,6 +6,7 @@
   <title>Refaccionaria Los Mochis — Luis Fernando López Espinoza</title>
   <meta name="description" content="Plataforma integral de inventarios y ventas con backend centralizado en C#, app móvil en .NET MAUI y extensión de navegador.">
   <link rel="icon" type="image/png" href="../img/proyectos/refaccionaria-los-mochis/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -22,10 +23,9 @@
   </nav>
 
   <main class="container">
-    <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
+    <a class="back" href="../index.html#proyectos"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i>Volver a proyectos</a>
 
     <header class="project-header">
-      <p class="hero__role">Caso de estudio · Ecosistema</p>
       <h1>Refaccionaria Los Mochis</h1>
       <p>
         Plataforma integral de inventarios y ventas con backend centralizado en C#,
@@ -33,11 +33,11 @@
       </p>
       <!-- Etiquetas clicables: cada una abre su bloque de detalle (imagen + texto) debajo -->
       <ul class="tags tags--interactive">
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-csharp">C# / .NET</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-maui">.NET MAUI</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-webapi">Web API</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-db">Base de datos</button></li>
-        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-chrome">Chrome Extension</button></li>      </ul>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-csharp">C# / .NET<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-maui">.NET MAUI<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-webapi">Web API<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-db">Base de datos<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-chrome">Chrome Extension<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button></li>      </ul>
 
       <div class="tech-details">
 
@@ -245,9 +245,14 @@
       </div>
     </section>
 
-    <nav class="project-nav">
-      <a href="../index.html#proyectos">← Todos los proyectos</a>
-      <a href="mouse-wifi.html">Mouse Wi-Fi →</a>
+    <nav class="project-switcher" aria-label="Proyectos">
+      <h2>Proyectos</h2>
+      <ul>
+        <li><a href="refaccionaria-los-mochis.html" aria-current="page"><span class="ps-icon" style="--media-bg: #f2f6ea"><img src="../img/proyectos/refaccionaria-los-mochis/Logo.png" alt=""></span><span>Refaccionaria Los Mochis</span></a></li>
+        <li><a href="mouse-wifi.html"><span class="ps-icon" style="--media-bg: #10141e"><img src="../img/proyectos/Mouse%20Wifi/Icono.jpg" alt=""></span><span>Mouse Wi-Fi</span></a></li>
+        <li><a href="conteo-gasolina.html"><span class="ps-icon" style="--media-bg: #1a0a04"><img src="../img/proyectos/Contador%20Gasolina/icono.png" alt=""></span><span>Conteo Gasolina</span></a></li>
+        <li><a href="escaneo-wifi.html"><span class="ps-icon" style="--media-bg: #000c13"><img src="../img/proyectos/Escaneo%20Wifi/Icono.png" alt=""></span><span>Escaneo Wi-Fi</span></a></li>
+      </ul>
     </nav>
   </main>
 

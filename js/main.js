@@ -15,50 +15,24 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-// Pestañas internas de las páginas de proyecto.
-// Se puede enlazar directo a una pestaña con #id-del-panel (ej. #tab-movil).
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
-  if (!tabs.length) return;
-
-  const select = (tab, updateHash = true) => {
-    tabs.forEach((t) => {
-      const on = t === tab;
-      t.setAttribute("aria-selected", on);
-      t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
-    });
-    if (updateHash) history.replaceState(null, "", "#" + tab.getAttribute("aria-controls"));
-  };
-
-  tabs.forEach((tab, i) => {
-    tab.addEventListener("click", () => select(tab));
-    tab.addEventListener("keydown", (e) => {
-      const dir = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-      if (!dir) return;
-      const next = tabs[(i + dir + tabs.length) % tabs.length];
-      next.focus();
-      select(next);
-    });
-  });
-
-  const fromHash = tabs.find((t) => "#" + t.getAttribute("aria-controls") === location.hash);
-  select(fromHash || tabs[0], false);
-});
-
-// Lightbox para las galerías de proyectos: clic en una imagen la abre en grande.
+// Lightbox: clic en una imagen de un bloque de etiqueta la abre en grande.
 // Se navega con las flechas del teclado o los botones, y se cierra con Esc.
+// El cambio de imagen con flechas es instantáneo a propósito: es una acción repetida.
 document.addEventListener("DOMContentLoaded", () => {
-  if (!document.querySelector(".gallery img")) return;
+  const ZOOMABLE = ".tech-detail img";
+  if (!document.querySelector(ZOOMABLE)) return;
   let images = [];
+
+  // Íconos de Font Awesome
+  const icon = (name) => `<i class="fa-solid ${name}" aria-hidden="true"></i>`;
 
   const box = document.createElement("div");
   box.className = "lightbox";
   box.innerHTML = `
-    <button class="lightbox__close" aria-label="Cerrar">&times;</button>
-    <button class="lightbox__prev" aria-label="Anterior">&#8249;</button>
+    <button class="lightbox__close" aria-label="Cerrar">${icon("fa-xmark")}</button>
+    <button class="lightbox__prev" aria-label="Anterior">${icon("fa-chevron-left")}</button>
     <img alt="">
-    <button class="lightbox__next" aria-label="Siguiente">&#8250;</button>`;
+    <button class="lightbox__next" aria-label="Siguiente">${icon("fa-chevron-right")}</button>`;
   document.body.appendChild(box);
 
   const big = box.querySelector("img");
@@ -72,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const open = (i) => { show(i); box.classList.add("open"); };
   const close = () => box.classList.remove("open");
 
-  // Las flechas recorren solo la galería de la imagen pulsada (no las de otras pestañas).
-  document.querySelectorAll(".gallery img").forEach((img) =>
+  // Las flechas recorren solo el grupo de la imagen pulsada (su galería o su bloque).
+  document.querySelectorAll(ZOOMABLE).forEach((img) =>
     img.addEventListener("click", () => {
-      images = Array.from(img.closest(".gallery").querySelectorAll("img"));
+      images = Array.from(img.closest(".tech-detail").querySelectorAll("img"));
       open(images.indexOf(img));
     })
   );
