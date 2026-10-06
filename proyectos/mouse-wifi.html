@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Wi-Fi — Luis Fernando López Espinoza</title>
+  <meta name="description" content="Servidor de escritorio en C# para controlar, administrar y automatizar Windows de forma remota.">
+  <link rel="icon" type="image/jpeg" href="../img/proyectos/Mouse%20Wifi/Icono.jpg">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">Luis F. López</a>
+      <ul class="nav__links">
+        <li><a href="../index.html#proyectos">Proyectos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
+
+    <header class="project-header">
+      <p class="hero__role">Aplicación de escritorio · Servidor</p>
+      <h1>Mouse Wi-Fi</h1>
+      <p>
+        Servidor de escritorio en C# para controlar, administrar y automatizar Windows de
+        forma remota.
+      </p>
+
+      <!-- Etiquetas clicables: cada una abre su bloque de detalle (imagen + texto) debajo -->
+      <ul class="tags tags--interactive">
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="mw-control">Control y automatización</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="mw-archivos">Archivos remotos</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="mw-monitoreo">Monitoreo y dashboard</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="mw-red">Red redundante</button></li>
+      </ul>
+
+      <div class="tech-details">
+
+        <!-- Control y automatización -->
+        <section class="tech-detail" id="mw-control" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Control y automatización</h3>
+            <ul>
+              <li>
+                <strong>Mouse y teclado remotos:</strong> control del cursor y simulación de
+                teclado en tiempo real con APIs nativas de Windows (Win32).
+              </li>
+              <li>
+                <strong>Macros y autoclicker:</strong> motor para ejecutar macros personalizadas
+                y clics automáticos.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Archivos remotos -->
+        <section class="tech-detail" id="mw-archivos" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Administrador de archivos remoto</h3>
+            <ul>
+              <li>
+                <strong>Explorador de archivos:</strong> navegación por el sistema de archivos
+                de la PC y lectura de metadatos.
+              </li>
+              <li>
+                <strong>Gestión de carpetas:</strong> crear y eliminar directorios a distancia.
+              </li>
+              <li>
+                <strong>Transferencias:</strong> carga y descarga de archivos en ambos sentidos.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Monitoreo y dashboard -->
+        <section class="tech-detail" id="mw-monitoreo" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Monitoreo, consola y Web Dashboard</h3>
+            <ul>
+              <li>
+                <strong>Consola interna:</strong> registro de actividad (log) en tiempo real.
+              </li>
+              <!-- TODO: el texto pegado se cortó en "Registr..." — completar -->
+              <li>Texto pendiente.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Red redundante -->
+        <section class="tech-detail" id="mw-red" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Motor de red redundante</h3>
+            <p>Conexión por sockets TCP/UDP, Bluetooth y código QR.</p>
+            <!-- TODO: detalles pendientes -->
+            <p>Texto pendiente.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <dl class="project-meta">
+        <div><dt>Tipo</dt><dd>Servidor de escritorio</dd></div>
+        <div><dt>Plataforma</dt><dd>Windows</dd></div>
+        <div><dt>Lenguaje</dt><dd>C# · .NET</dd></div>
+        <div><dt>Conexión</dt><dd>TCP/UDP · Bluetooth · QR</dd></div>
+      </dl>
+    </header>
+
+    <section class="overview">
+      <div class="prose">
+        <h2>Resumen</h2>
+        <p>
+          <!-- TODO: para qué lo creaste y qué problema resuelve -->
+          Describe aquí para qué creaste Mouse Wi-Fi y qué problema resuelve.
+        </p>
+      </div>
+
+      <!-- Diagrama: módulos del servidor → motor de red -->
+      <div class="arch">
+        <svg class="arch-svg" viewBox="0 0 640 262" role="img"
+             aria-label="El servidor Mouse Wi-Fi en C# tiene cuatro módulos (control Win32, archivos, seguridad y logs, y web dashboard) que se comunican a través de un motor de red redundante con sockets TCP/UDP, Bluetooth y QR.">
+          <!-- Contenedor del servidor -->
+          <rect class="arch-group" x="12" y="8" width="616" height="246" rx="12"/>
+          <text class="arch-group-label" x="28" y="30">Mouse Wi-Fi Server · C#</text>
+
+          <!-- Conexiones -->
+          <line class="arch-link" x1="97"  y1="104" x2="260" y2="172"/>
+          <line class="arch-link" x1="242" y1="104" x2="300" y2="172"/>
+          <line class="arch-link" x1="397" y1="104" x2="340" y2="172"/>
+          <line class="arch-link" x1="542" y1="104" x2="380" y2="172"/>
+
+          <!-- Módulos -->
+          <rect class="arch-box" x="30"  y="42" width="135" height="62" rx="10"/>
+          <text class="arch-title" x="97"  y="69">Control</text>
+          <text class="arch-sub"   x="97"  y="90">Win32 · macros</text>
+
+          <rect class="arch-box" x="175" y="42" width="135" height="62" rx="10"/>
+          <text class="arch-title" x="242" y="69">Archivos</text>
+          <text class="arch-sub"   x="242" y="90">Explorador remoto</text>
+
+          <rect class="arch-box" x="330" y="42" width="135" height="62" rx="10"/>
+          <text class="arch-title" x="397" y="69">Seguridad</text>
+          <text class="arch-sub"   x="397" y="90">Logs en tiempo real</text>
+
+          <rect class="arch-box" x="475" y="42" width="135" height="62" rx="10"/>
+          <text class="arch-title" x="542" y="69">Web Dashboard</text>
+          <text class="arch-sub"   x="542" y="90">Monitoreo</text>
+
+          <!-- Motor de red -->
+          <rect class="arch-box arch-box--core" x="170" y="172" width="300" height="62" rx="10"/>
+          <text class="arch-title" x="320" y="199">Motor de red redundante</text>
+          <text class="arch-sub"   x="320" y="220">TCP/UDP · Bluetooth · QR</text>
+        </svg>
+      </div>
+    </section>
+
+    <nav class="project-nav">
+      <a href="../index.html#proyectos">← Todos los proyectos</a>
+      <a href="conteo-gasolina.html">Conteo Gasolina →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Luis Fernando López Espinoza</div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

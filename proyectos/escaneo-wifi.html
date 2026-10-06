@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escaneo Wi-Fi — Luis Fernando López Espinoza</title>
+  <meta name="description" content="App multiplataforma en .NET MAUI para escanear, diagnosticar y monitorear redes locales en tiempo real.">
+  <link rel="icon" type="image/png" href="../img/proyectos/Escaneo%20Wifi/Icono.png">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">Luis F. López</a>
+      <ul class="nav__links">
+        <li><a href="../index.html#proyectos">Proyectos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
+
+    <header class="project-header">
+      <p class="hero__role">Diagnóstico de redes · App multiplataforma</p>
+      <h1>Escaneo Wi-Fi</h1>
+      <p>
+        App multiplataforma en .NET MAUI para escanear, diagnosticar y monitorear redes
+        locales en tiempo real, con funciones extra en Windows gracias a sus APIs nativas.
+      </p>
+
+      <!-- Etiquetas clicables: cada una abre su bloque de detalle (imagen + texto) debajo -->
+      <ul class="tags tags--interactive">
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-fases">Escaneo en 3 fases</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-ssdp">Descubrimiento SSDP</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-windows">Integración con Windows</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-puertos">Puertos y calidad de red</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-monitoreo">Monitoreo en 2º plano</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="ew-inventario">Inventario</button></li>
+      </ul>
+
+      <div class="tech-details">
+
+        <!-- Escaneo en 3 fases -->
+        <section class="tech-detail" id="ew-fases" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Motor de escaneo adaptativo</h3>
+            <ul>
+              <li>
+                <strong>Fase 1 · Rápido:</strong> barrido asíncrono con ping (ICMP) sobre la red
+                local para un mapeo inmediato.
+              </li>
+              <li>
+                <strong>Fase 2 · Profundo:</strong> análisis detallado de los dispositivos encontrados.
+              </li>
+              <li>
+                <strong>Fase 3 · Tolerante:</strong> tiempos de espera extendidos para detectar
+                equipos lentos, de bajo consumo o con pérdida de paquetes.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Descubrimiento SSDP -->
+        <section class="tech-detail" id="ew-ssdp" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Descubrimiento de dispositivos (SSDP)</h3>
+            <ul>
+              <li>
+                <strong>UDP multicast:</strong> sockets que envían y escuchan paquetes de
+                descubrimiento para identificar servicios UPnP.
+              </li>
+              <li>
+                <strong>Sin configuración:</strong> detecta Smart TVs, routers, impresoras y
+                servidores multimedia automáticamente.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Integración con Windows -->
+        <section class="tech-detail" id="ew-windows" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Integración con Windows</h3>
+            <ul>
+              <li>
+                <strong>APIs nativas de red:</strong> resuelven el nombre exacto de cada equipo
+                (hostname) y consultan parámetros avanzados de la subred.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Puertos y calidad de red -->
+        <section class="tech-detail" id="ew-puertos" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Auditoría de puertos y calidad de red</h3>
+            <ul>
+              <li>
+                <strong>Sondeo de puertos:</strong> revisa puertos TCP/UDP en cada IP para
+                encontrar servicios activos.
+              </li>
+              <li>
+                <strong>Métricas:</strong> latencia en ms, porcentaje de pérdida de paquetes e
+                intensidad de la señal Wi-Fi.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Monitoreo en 2º plano -->
+        <section class="tech-detail" id="ew-monitoreo" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Monitoreo continuo</h3>
+            <ul>
+              <li>
+                <strong>Online / offline:</strong> vigila en segundo plano el estado de los
+                dispositivos de la red.
+              </li>
+              <li>
+                <strong>Alertas en tiempo real:</strong> avisa cuando se conecta un dispositivo
+                desconocido o se desconecta uno conocido.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Inventario -->
+        <section class="tech-detail" id="ew-inventario" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Inventario personalizado</h3>
+            <ul>
+              <li>
+                <strong>Alias e íconos:</strong> nombres e íconos propios para cada IP/MAC,
+                para mantener ordenado el inventario de la red.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <dl class="project-meta">
+        <div><dt>Tipo</dt><dd>App multiplataforma</dd></div>
+        <div><dt>Plataformas</dt><dd>Móvil · Windows</dd></div>
+        <div><dt>Lenguaje</dt><dd>C# · .NET MAUI</dd></div>
+        <div><dt>Protocolos</dt><dd>ICMP · SSDP · TCP/UDP</dd></div>
+      </dl>
+    </header>
+
+    <section class="overview">
+      <div class="prose">
+        <h2>Resumen</h2>
+        <p>
+          A diferencia de las utilerías convencionales, combina el uso en el celular con
+          funciones extra en Windows, donde aprovecha las APIs nativas para obtener nombres de
+          equipo y datos de la subred.
+        </p>
+      </div>
+
+      <!-- Diagrama: escaneo en 3 fases + SSDP + APIs de Windows → lista de dispositivos → monitoreo e inventario -->
+      <div class="arch">
+        <svg class="arch-svg" viewBox="0 0 640 325" role="img"
+             aria-label="El escaneo adaptativo pasa por tres fases: rápido, profundo y tolerante. Sus resultados, junto con el descubrimiento SSDP y las APIs de Windows, forman la lista de dispositivos, que alimenta el monitoreo y el inventario.">
+          <defs>
+            <marker id="arrow-ew" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" class="arch-arrowhead"/>
+            </marker>
+          </defs>
+
+          <!-- Escaneo adaptativo -->
+          <rect class="arch-group" x="10" y="8" width="620" height="100" rx="12"/>
+          <text class="arch-group-label" x="26" y="28">Escaneo adaptativo · ICMP</text>
+
+          <rect class="arch-box" x="20" y="38" width="180" height="58" rx="10"/>
+          <text class="arch-title" x="110" y="63">Fase 1 · Rápido</text>
+          <text class="arch-sub"   x="110" y="83">Ping asíncrono</text>
+
+          <rect class="arch-box" x="230" y="38" width="180" height="58" rx="10"/>
+          <text class="arch-title" x="320" y="63">Fase 2 · Profundo</text>
+          <text class="arch-sub"   x="320" y="83">Tiempos estándar</text>
+
+          <rect class="arch-box" x="440" y="38" width="180" height="58" rx="10"/>
+          <text class="arch-title" x="530" y="63">Fase 3 · Tolerante</text>
+          <text class="arch-sub"   x="530" y="83">Timeouts extendidos</text>
+
+          <!-- Conexiones -->
+          <line class="arch-link" x1="200" y1="67"  x2="228" y2="67"  marker-end="url(#arrow-ew)"/>
+          <line class="arch-link" x1="410" y1="67"  x2="438" y2="67"  marker-end="url(#arrow-ew)"/>
+          <line class="arch-link" x1="320" y1="108" x2="320" y2="138" marker-end="url(#arrow-ew)"/>
+          <line class="arch-link" x1="200" y1="169" x2="228" y2="169" marker-end="url(#arrow-ew)"/>
+          <line class="arch-link" x1="440" y1="169" x2="412" y2="169" marker-end="url(#arrow-ew)"/>
+          <line class="arch-link" x1="290" y1="200" x2="225" y2="248" marker-end="url(#arrow-ew)"/>
+          <line class="arch-link" x1="350" y1="200" x2="415" y2="248" marker-end="url(#arrow-ew)"/>
+
+          <!-- Fuentes adicionales + lista -->
+          <rect class="arch-box" x="20" y="140" width="180" height="60" rx="10"/>
+          <text class="arch-title" x="110" y="166">SSDP</text>
+          <text class="arch-sub"   x="110" y="186">Dispositivos UPnP</text>
+
+          <rect class="arch-box arch-box--core" x="230" y="140" width="180" height="60" rx="10"/>
+          <text class="arch-title" x="320" y="166">Dispositivos</text>
+          <text class="arch-sub"   x="320" y="186">IP · MAC · puertos</text>
+
+          <rect class="arch-box" x="440" y="140" width="180" height="60" rx="10"/>
+          <text class="arch-title" x="530" y="166">APIs de Windows</text>
+          <text class="arch-sub"   x="530" y="186">Hostname y subred</text>
+
+          <!-- Resultado -->
+          <rect class="arch-box arch-box--db" x="120" y="250" width="180" height="60" rx="10"/>
+          <text class="arch-title" x="210" y="276">Monitoreo</text>
+          <text class="arch-sub"   x="210" y="296">Online / offline · alertas</text>
+
+          <rect class="arch-box arch-box--db" x="340" y="250" width="180" height="60" rx="10"/>
+          <text class="arch-title" x="430" y="276">Inventario</text>
+          <text class="arch-sub"   x="430" y="296">Alias e íconos</text>
+        </svg>
+      </div>
+    </section>
+
+    <nav class="project-nav">
+      <a href="../index.html#proyectos">← Todos los proyectos</a>
+      <a href="refaccionaria-los-mochis.html">Refaccionaria Los Mochis →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Luis Fernando López Espinoza</div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

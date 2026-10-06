@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conteo Gasolina — Luis Fernando López Espinoza</title>
+  <meta name="description" content="Web API en C# sobre Ubuntu Server para analizar el consumo de combustible, con precios oficiales de la CRE y sincronización offline.">
+  <link rel="icon" type="image/png" href="../img/proyectos/Contador%20Gasolina/icono.png">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">Luis F. López</a>
+      <ul class="nav__links">
+        <li><a href="../index.html#proyectos">Proyectos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
+
+    <header class="project-header">
+      <p class="hero__role">Backend · Servidor de datos</p>
+      <h1>Conteo Gasolina</h1>
+      <p>
+        Web API REST en C# sobre Ubuntu Server para analizar el consumo de combustible,
+        con precios oficiales de la CRE y sincronización de datos desde el celular.
+      </p>
+
+      <!-- Etiquetas clicables: cada una abre su bloque de detalle (imagen + texto) debajo -->
+      <ul class="tags tags--interactive">
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="cg-linux">Web API en Linux</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="cg-dapper">Dapper y bases de datos</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="cg-cre">Precios CRE</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="cg-gps">Gasolineras cercanas</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="cg-bi">Reportes y BI</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="cg-sync">Sincronización offline</button></li>
+      </ul>
+
+      <div class="tech-details">
+
+        <!-- Web API en Linux -->
+        <section class="tech-detail" id="cg-linux" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Web API en Linux</h3>
+            <ul>
+              <li>
+                <strong>Despliegue nativo en Ubuntu Server:</strong> la Web API de C# corre
+                directamente en Linux, conectada a PostgreSQL en producción.
+              </li>
+              <li>
+                <strong>Arquitectura desacoplada:</strong> endpoints JSON, panel de administración
+                y métricas separados de los servicios en segundo plano.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Dapper y bases de datos -->
+        <section class="tech-detail" id="cg-dapper" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Dapper y bases de datos</h3>
+            <ul>
+              <li>
+                <strong>Un mismo código, dos motores:</strong> Dapper ejecuta consultas SQL
+                optimizadas en SQL Server Express (pruebas en Windows/IIS) y en PostgreSQL (producción).
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Precios CRE -->
+        <section class="tech-detail" id="cg-cre" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Precios oficiales de la CRE</h3>
+            <ul>
+              <li>
+                <strong>Scraping automático:</strong> un servicio en segundo plano descarga y
+                procesa los datos de la Comisión Reguladora de Energía para mantener actualizados
+                los precios nacionales.
+              </li>
+              <li>
+                <strong>Contraste de precios:</strong> compara los precios oficiales con los
+                consumos reales que reportan los usuarios para detectar variaciones.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Gasolineras cercanas -->
+        <section class="tech-detail" id="cg-gps" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Gasolineras cercanas</h3>
+            <ul>
+              <li>
+                <strong>Búsqueda por GPS:</strong> cálculo por coordenadas para encontrar las
+                gasolineras más cercanas, con sus precios actualizados y la última carga registrada.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Reportes y BI -->
+        <section class="tech-detail" id="cg-bi" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Reportes e inteligencia de negocios</h3>
+            <ul>
+              <li>
+                <strong>Gráficas de consumo:</strong> evolución del costo por litro y del kilometraje.
+              </li>
+              <li>
+                <strong>Exportación:</strong> reportes consolidados en CSV y Excel.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Sincronización offline -->
+        <section class="tech-detail" id="cg-sync" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Sincronización offline-first</h3>
+            <ul>
+              <li>
+                <strong>Datos sin conexión:</strong> endpoints que reciben los paquetes de datos
+                generados en el celular sin internet y los integran al servidor central.
+              </li>
+              <li>
+                <strong>Sin bloqueos:</strong> la sincronización resuelve la consistencia de los
+                datos sin afectar la disponibilidad de la API.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <dl class="project-meta">
+        <div><dt>Tipo</dt><dd>Web API REST</dd></div>
+        <div><dt>Servidor</dt><dd>Ubuntu Server</dd></div>
+        <div><dt>Lenguaje</dt><dd>C# · .NET · Dapper</dd></div>
+        <div><dt>Base de datos</dt><dd>PostgreSQL</dd></div>
+      </dl>
+    </header>
+
+    <section class="overview">
+      <div class="prose">
+        <h2>Resumen</h2>
+        <p>
+          <!-- TODO: para qué lo creaste y qué problema resuelve -->
+          Describe aquí para qué creaste Conteo Gasolina y qué problema resuelve.
+        </p>
+      </div>
+
+      <!-- Diagrama: App móvil y CRE → Ubuntu Server (Web API + servicio en 2º plano) → PostgreSQL -->
+      <div class="arch">
+        <svg class="arch-svg" viewBox="0 0 640 345" role="img"
+             aria-label="La app móvil envía sus datos a la Web API y la CRE alimenta un servicio en segundo plano; ambos corren en Ubuntu Server y guardan en PostgreSQL.">
+          <defs>
+            <marker id="arrow-cg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" class="arch-arrowhead"/>
+            </marker>
+          </defs>
+
+          <!-- Conexiones -->
+          <line class="arch-link" x1="130" y1="82"  x2="165" y2="150" marker-end="url(#arrow-cg)"/>
+          <line class="arch-link" x1="510" y1="82"  x2="475" y2="150" marker-end="url(#arrow-cg)"/>
+          <line class="arch-link" x1="170" y1="214" x2="290" y2="266" marker-end="url(#arrow-cg)"/>
+          <line class="arch-link" x1="470" y1="214" x2="350" y2="266" marker-end="url(#arrow-cg)"/>
+
+          <!-- Fuentes de datos -->
+          <rect class="arch-box" x="40" y="20" width="180" height="62" rx="10"/>
+          <text class="arch-title" x="130" y="47">App móvil</text>
+          <text class="arch-sub"   x="130" y="68">Offline-first</text>
+
+          <rect class="arch-box" x="420" y="20" width="180" height="62" rx="10"/>
+          <text class="arch-title" x="510" y="47">CRE</text>
+          <text class="arch-sub"   x="510" y="68">Precios oficiales</text>
+
+          <!-- Ubuntu Server -->
+          <rect class="arch-group" x="20" y="116" width="600" height="114" rx="12"/>
+          <text class="arch-group-label" x="36" y="136">Ubuntu Server</text>
+
+          <rect class="arch-box arch-box--core" x="60" y="152" width="220" height="62" rx="10"/>
+          <text class="arch-title" x="170" y="179">Web API</text>
+          <text class="arch-sub"   x="170" y="200">C# · REST · Dapper</text>
+
+          <rect class="arch-box arch-box--core" x="360" y="152" width="220" height="62" rx="10"/>
+          <text class="arch-title" x="470" y="179">Servicio en 2º plano</text>
+          <text class="arch-sub"   x="470" y="200">Scraping CRE</text>
+
+          <!-- Base de datos -->
+          <rect class="arch-box arch-box--db" x="210" y="268" width="220" height="62" rx="10"/>
+          <text class="arch-title" x="320" y="295">PostgreSQL</text>
+          <text class="arch-sub"   x="320" y="316">Producción</text>
+        </svg>
+      </div>
+    </section>
+
+    <nav class="project-nav">
+      <a href="../index.html#proyectos">← Todos los proyectos</a>
+      <a href="escaneo-wifi.html">Escaneo Wi-Fi →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Luis Fernando López Espinoza</div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

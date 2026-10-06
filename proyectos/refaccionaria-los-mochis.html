@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refaccionaria Los Mochis — Luis Fernando López Espinoza</title>
+  <meta name="description" content="Plataforma integral de inventarios y ventas con backend centralizado en C#, app móvil en .NET MAUI y extensión de navegador.">
+  <link rel="icon" type="image/png" href="../img/proyectos/refaccionaria-los-mochis/Logo.png">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">Luis F. López</a>
+      <ul class="nav__links">
+        <li><a href="../index.html#proyectos">Proyectos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <a class="back" href="../index.html#proyectos">← Volver a proyectos</a>
+
+    <header class="project-header">
+      <p class="hero__role">Caso de estudio · Ecosistema</p>
+      <h1>Refaccionaria Los Mochis</h1>
+      <p>
+        Plataforma integral de inventarios y ventas con backend centralizado en C#,
+        app móvil en .NET MAUI y extensión de navegador.
+      </p>
+      <!-- Etiquetas clicables: cada una abre su bloque de detalle (imagen + texto) debajo -->
+      <ul class="tags tags--interactive">
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-csharp">C# / .NET</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-maui">.NET MAUI</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-webapi">Web API</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-db">Base de datos</button></li>
+        <li><button class="tag-btn" aria-expanded="false" aria-controls="tech-chrome">Chrome Extension</button></li>      </ul>
+
+      <div class="tech-details">
+
+        <!-- C# / .NET -->
+        <section class="tech-detail" id="tech-csharp" hidden>
+          <!-- Cambia este div por: <img src="../img/proyectos/refaccionaria-los-mochis/csharp.png" alt="..."> -->
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>C# / .NET — el backend</h3>
+            <ul>
+              <li>
+                <strong>Gestión de usuarios y contraseñas:</strong> con restricción de módulos por
+                rol y expulsión automática del sistema al revocar permisos.
+              </li>
+              <li>
+                <strong>Reportes dinámicos:</strong> un reporteador hecho a medida que arma los
+                reportes en tiempo real según lo que se necesite consultar.
+              </li>
+              <li>
+                <strong>Exportación a Excel:</strong> descarga de archivos Excel de ventas,
+                catálogos y los distintos tipos de reportes.
+              </li>
+              <li>
+                <strong>Bot de Telegram:</strong> integración con la API de Telegram que consulta
+                la base de datos para buscar números de parte específicos desde el chat.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- .NET MAUI -->
+        <section class="tech-detail" id="tech-maui" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>.NET MAUI — la app móvil</h3>
+            <p>
+              Aplicación móvil nativa multiplataforma orientada a la movilidad en almacén,
+              recepción de mercancía y gestión en piso de venta.
+            </p>
+            <ul>
+              <li>
+                <strong>Seguridad y roles sincronizados:</strong> autenticación remota y restricción
+                de pantallas/módulos por rol, replicando las políticas de acceso y expulsión del backend.
+              </li>
+              <li>
+                <strong>Consulta de precios y stock:</strong> búsqueda rápida de refacciones y
+                verificación de existencias en tiempo real mediante consumo de la Web API.
+              </li>
+              <li>
+                <strong>Registro y altas de productos:</strong> formulario móvil para dar de alta
+                nuevos artículos en el catálogo con actualización inmediata en la base de datos central.
+              </li>
+              <li>
+                <strong>Captura y gestión de imágenes:</strong> integración con la cámara del
+                dispositivo para fotografiar refacciones, asociar imágenes al producto y subirlas al servidor.
+              </li>
+              <li>
+                <strong>Reportes móviles:</strong> visualización de métricas clave, resúmenes de
+                inventario y reportes operativos optimizados para pantallas móviles.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Web API -->
+        <section class="tech-detail" id="tech-webapi" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Web API — servicios para la app móvil</h3>
+            <p>
+              API REST independiente creada para desacoplar la app móvil del backend MVC.
+            </p>
+            <ul>
+              <li>
+                <strong>El problema:</strong> la app MAUI consumía directamente el backend MVC, el
+                mismo que genera las vistas y atiende a los usuarios del sistema web todo el tiempo.
+              </li>
+              <li>
+                <strong>La solución:</strong> una Web API dedicada que expone los datos en JSON para
+                la app, sin depender del backend de las vistas.
+              </li>
+              <li>
+                <strong>Resultado:</strong> carga separada entre la web y la app móvil; cada parte
+                puede crecer o cambiar sin afectar a la otra.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Base de datos -->
+        <section class="tech-detail" id="tech-db" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Base de datos</h3>
+            <p>Base de datos central del sistema, compartida por la web y la Web API.</p>
+            <ul>
+              <li>
+                <strong>Más de 25,000 productos</strong> registrados en el catálogo.
+              </li>
+              <li>
+                <strong>Más de 25 tablas</strong> relacionadas.
+              </li>
+              <li>
+                <strong>Control de stock:</strong> cantidad disponible de cada producto, con una
+                vista que concentra las compras y las ventas.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Chrome Extension -->
+        <section class="tech-detail" id="tech-chrome" hidden>
+          <div class="img-placeholder">Aquí va una imagen<br>1200 × 800 px</div>
+          <div class="tech-detail__text">
+            <h3>Chrome Extension — consulta y automatización</h3>
+            <p>
+              Extensión de navegador que busca productos tanto en el sistema propio como en los
+              sistemas de los proveedores, para consultar y después hacer pedidos.
+            </p>
+            <ul>
+              <li>
+                <strong>Consulta de productos en el sistema propio:</strong> precio, disponibilidad,
+                marca y descripción a partir de un número de parte o de una equivalencia.
+              </li>
+              <li>
+                <strong>Automatización de búsquedas:</strong> localiza productos en las páginas de
+                los proveedores sin tener que buscarlos a mano en cada sitio.
+              </li>
+              <li>
+                <strong>Compras más ágiles:</strong> facilita los pedidos en los sistemas de otros
+                proveedores.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <dl class="project-meta">
+        <div><dt>Periodo</dt><dd>2024 – 2026</dd></div>
+        <div><dt>Tipo</dt><dd>Plataforma multicanal</dd></div>
+        <div><dt>Clientes</dt><dd>Web · Móvil · Extensión</dd></div>
+        <div><dt>Backend</dt><dd>C# · MVC + Web API</dd></div>
+        <div><dt>Base de datos</dt><dd>SQL Server</dd></div>
+      </dl>
+    </header>
+
+    <!-- Visión general del sistema (sin pestañas: el detalle de cada parte está en las etiquetas de arriba) -->
+    <section class="overview">
+      <div class="prose">
+        <h2>Resumen</h2>
+        <p>
+          <!-- TODO: describe el problema del negocio con tus palabras -->
+          Describe aquí el problema del negocio que resolvía el sistema.
+        </p>
+        <p>
+          La solución pasó de ser un sistema web local a una plataforma multicanal: web, app
+          móvil y extensión de navegador, con backend en C# y una base de datos central.
+        </p>
+      </div>
+
+      <!-- Diagrama de arquitectura: Base de datos → Publicación IIS (Web API + Backend MVC) → clientes -->
+      <div class="arch">
+        <svg class="arch-svg" viewBox="0 0 640 380" role="img"
+             aria-label="Base de datos conectada a la publicación en IIS, donde están montados la Web API y el Backend MVC. La app móvil se conecta a la Web API, la extensión de Chrome a la Web API y al Backend MVC, y el despliegue web solo al Backend MVC.">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" class="arch-arrowhead"/>
+            </marker>
+          </defs>
+
+          <!-- Conexiones -->
+          <line class="arch-link" x1="320" y1="72" x2="320" y2="104" marker-start="url(#arrow)"/>
+          <line class="arch-link" x1="120" y1="300" x2="180" y2="198" marker-end="url(#arrow)"/>
+          <line class="arch-link" x1="300" y1="300" x2="215" y2="198" marker-end="url(#arrow)"/>
+          <line class="arch-link" x1="340" y1="300" x2="425" y2="198" marker-end="url(#arrow)"/>
+          <line class="arch-link" x1="520" y1="300" x2="460" y2="198" marker-end="url(#arrow)"/>
+
+          <!-- 1. Base de datos -->
+          <rect class="arch-box arch-box--db" x="210" y="10" width="220" height="62" rx="10"/>
+          <text class="arch-title" x="320" y="37">Base de datos</text>
+          <text class="arch-sub" x="320" y="58">+25,000 productos · +25 tablas</text>
+
+          <!-- 2. Publicación IIS: Web API + Backend MVC montados en el mismo servidor -->
+          <rect class="arch-group" x="60" y="104" width="520" height="110" rx="12"/>
+          <text class="arch-group-label" x="76" y="124">Publicación IIS</text>
+          <rect class="arch-box arch-box--core" x="100" y="136" width="180" height="62" rx="10"/>
+          <text class="arch-title" x="190" y="163">Web API</text>
+          <text class="arch-sub" x="190" y="184">C# · servicios</text>
+          <rect class="arch-box arch-box--core" x="360" y="136" width="180" height="62" rx="10"/>
+          <text class="arch-title" x="450" y="163">Backend MVC</text>
+          <text class="arch-sub" x="450" y="184">C# · vistas web</text>
+
+          <!-- 3. Clientes -->
+          <rect class="arch-box" x="40" y="300" width="160" height="62" rx="10"/>
+          <text class="arch-title" x="120" y="327">App móvil</text>
+          <text class="arch-sub" x="120" y="348">.NET MAUI</text>
+          <rect class="arch-box" x="240" y="300" width="160" height="62" rx="10"/>
+          <text class="arch-title" x="320" y="327">Extensión Chrome</text>
+          <text class="arch-sub" x="320" y="348">Manifest V3</text>
+          <rect class="arch-box" x="440" y="300" width="160" height="62" rx="10"/>
+          <text class="arch-title" x="520" y="327">Despliegue web</text>
+          <text class="arch-sub" x="520" y="348">Usuarios en navegador</text>
+        </svg>
+      </div>
+    </section>
+
+    <nav class="project-nav">
+      <a href="../index.html#proyectos">← Todos los proyectos</a>
+      <a href="mouse-wifi.html">Mouse Wi-Fi →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Luis Fernando López Espinoza</div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
